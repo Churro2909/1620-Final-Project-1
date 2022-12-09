@@ -29,6 +29,8 @@ class Controller(QMainWindow, Ui_MainWindow):
             answer = cat_ears(x)
             if answer == -1:
                 self.label_output.setText(f"Input must be whole numbers! You can't have half of a cat.")
+            elif answer == -2:
+                self.label_output.setText(f"Input must be positive numbers! You can't have negative cats.")
             else:
                 self.label_output.setText(f"For {x} cats, there are {answer} cat ears!")
         except ValueError:
@@ -40,6 +42,8 @@ class Controller(QMainWindow, Ui_MainWindow):
             answer = alien_ears(x)
             if answer == -1:
                 self.label_output.setText(f"Input must be whole numbers! You can't have half of a alien...right?")
+            elif answer == -2:
+                self.label_output.setText(f"Input must be positive numbers! You can't have negative aliens.")
             else:
                 self.label_output.setText(f"For {x} aliens, there are {answer} alien ears!")
         except ValueError:

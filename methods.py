@@ -7,7 +7,9 @@ def powers(x, y):
 
 def cat_ears(n):
     if n % 1 == 0:
-        if n == 0:
+        if n < 0:
+            return -2
+        elif n == 0:
             return 0
         elif n == 1:
             return 2
@@ -18,7 +20,9 @@ def cat_ears(n):
 
 
 def alien_ears(n):
-    if n % 1 == 0:
+    if n < 0:
+        return -2
+    elif n % 1 == 0:
         if n == 0:
             return 0
         elif n % 2 == 0:
