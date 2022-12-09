@@ -1,8 +1,13 @@
 def powers(x, y):
-    if y == 1:
-        return x
+    if y < 0:
+        return (1 / x) * powers(x, y + 1)
+    elif y == 0:
+        return 1
     else:
-        return x * powers(x, y - 1)
+        if y == 1:
+            return x
+        else:
+            return x * powers(x, y - 1)
 
 
 def cat_ears(n):
